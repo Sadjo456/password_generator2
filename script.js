@@ -10,6 +10,7 @@ var specialCase = ["`", "~", "!", "@", "#", "$", "%", "^", "&", "*", "=", ":", "
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
+  console.log(password);
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
@@ -50,6 +51,7 @@ if (isNaN(length)) {
   console.log(upper);
   var specialCharacter = window.confirm("do you want special character");
   console.log(specialCharacter);
+  
   if (!lower && !upper && !specialCharacter && !number) {
     window.alert("you must choose at least one character");
     return null
@@ -58,7 +60,7 @@ if (isNaN(length)) {
   let userOptions = {
     length: length,
     lower: lower,
-    number: number
+    number: number,
     upper: upper,
     specialCharacter: specialCharacter,
 
